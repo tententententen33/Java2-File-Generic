@@ -12,8 +12,29 @@ class BookReviewReaderKai {
 		
 		try (BufferedReader br = new BufferedReader( new FileReader("booklist.txt"))) {
 			
+			String line;
+			while( ( line = br.readLine() ) != null ) {
+				// 1. コロンが含まれていない行（飾り線や空行）はスキップ
+                // 2. 「登録冊数」が含まれている行はスキップ
+                if (!line.contains("：") || line.contains("登録冊数")) {
+                    continue;
+                }
+                
+                String[] data = line.split("：");
+                String title = data[0];
+                String review = data[1];
+                
+                BookReview bookReview = new BookReview(title, review);
+                books.add(bookReview);
+			}
 		} catch (IOException e) {
 			System.out.println("ファイル読み込みエラー");
+		}
+		
+		for (BookReview book : books) {
+			System.out.print("タイトル：" + book.getTitle());
+			System.out.print(" ");
+			System.out.println("レビュー：" + book.getReview());
 		}
 	
 	}
