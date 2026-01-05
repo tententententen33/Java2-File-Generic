@@ -17,4 +17,12 @@ class BookReview {
     public String getReview() {
         return review;
     }
+
+	@Override
+	public String toString() {
+		return "タイトル : " + title + " レビュー : " + review;
+	}
+    
+    
+    
 }

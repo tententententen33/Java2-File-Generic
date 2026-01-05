@@ -31,15 +31,13 @@ public class BookReviewReader {
 			System.out.println("ファイル読み込みエラー");
 		}
 		
-		
-
-		
 		for (BookReview book : books) {
-			System.out.print("タイトル：" + book.getTitle());
-			System.out.print(" ");
-			System.out.println("レビュー：" + book.getReview());
+//			System.out.print("タイトル：" + book.getTitle());
+//			System.out.print(" ");
+//			System.out.println("レビュー：" + book.getReview());
+			System.out.println(book);
 		}
 	
 	}
-
+	
 }
