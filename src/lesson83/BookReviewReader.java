@@ -7,9 +7,11 @@ import java.util.ArrayList;
 
 public class BookReviewReader {
 
+	private static final String FILE_NAME = "booklist.txt";
+	
 	public static void main(String[] args) {
 		ArrayList<BookReview> books = new ArrayList<>();
-		try(BufferedReader br = new BufferedReader(new FileReader("booklist.txt"))) {
+		try(BufferedReader br = new BufferedReader(new FileReader(FILE_NAME))) {
 			
 			String line;
 			while((line = br.readLine()) != null) {
