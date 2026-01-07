@@ -11,7 +11,7 @@ class GenericsExample {
 		stringList.add("Java");
 		stringList.add("JavaScript");
 
-		stringList.add(123); // この行はコンパイルエラーになる！
+//		stringList.add(123);  この行はコンパイルエラーになる！
 
 	}
 

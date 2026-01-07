@@ -5,7 +5,7 @@ class BoxUser {
 	public static void main(String[] args) {
 		
         // String専用のBoxを作成
-        BoxKai<String> stringBox = new BoxKai<String>();
+        Box<String> stringBox = new Box<String>();
         stringBox.set("Hello, Generics!");
         
         String message = stringBox.get(); // キャスト不要
