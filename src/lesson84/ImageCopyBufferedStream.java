@@ -1,5 +1,9 @@
 package lesson84;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 class ImageCopyBufferedStream {
@@ -10,12 +14,13 @@ class ImageCopyBufferedStream {
 
 		long startTime = System.currentTimeMillis();
 
-		try (_____________________________________) {
+		try (BufferedInputStream bis = new BufferedInputStream (new FileInputStream("ファイル名"));
+				BufferedOutputStream bos = new BufferedOutputStream( new FileOutputStream("ファイル名"))) {
 
 			byte[] buffer = new byte[8192]; // 8KB
 			int bytesRead;
 
-			while ((bytesRead = bis.read(buffer)) != ___) {
+			while ((bytesRead = bis.read(buffer)) != -1) {
 				bos.write(buffer, 0, bytesRead);
 			}
 

@@ -2,9 +2,10 @@ package lesson85;
 
 import java.io.Serializable;
 
-class Item implements Serializable {
-	private static final long serialVersionUID = 1L;
+class Item implements Serializable{
 
+	private static final long serialVersionUID = 1L;
+	
 	private int itemId; // 商品番号
 	private String itemName; // 商品名
 	private int quantity; // 数量
