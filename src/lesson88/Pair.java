@@ -10,17 +10,17 @@ class Pair<K, V> {
     private V value;
     
     // コンストラクタ
-    public Pair(___ key, ___ value) {
+    public Pair(K key,  V value) {
         this.key = key;
         this.value = value;
     }
     
     // getter
-    public ___ getKey() {
+    public K getKey() {
         return key;
     }
     
-    public ___ getValue() {
+    public V getValue() {
         return value;
     }
     
