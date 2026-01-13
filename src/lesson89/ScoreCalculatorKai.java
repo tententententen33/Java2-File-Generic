@@ -2,7 +2,7 @@ package lesson89;
 
 import java.util.ArrayList;
 
-class ScoreCalculatorKai<T> {
+class ScoreCalculatorKai<T extends Number> {
 	
 	// doubleValue() メソッドを持つクラスであるかどうか確認するメソッド
 	void test() {
@@ -12,8 +12,8 @@ class ScoreCalculatorKai<T> {
 		Integer i = 10;
 		i.doubleValue();
 		
-		String s = "Hello";
-		// s.doubleValue(); // コンパイルエラー
+//		String s = "Hello";
+//		// s.doubleValue(); // コンパイルエラー
 	}
 
 	public double getAverage(ArrayList<T> scores){

@@ -2,21 +2,21 @@ package lesson89;
 
 import java.util.ArrayList;
 
-class ScoreCalculator<T> {
+class ScoreCalculator<T extends Number> {
 	
 	// doubleValue() メソッドを持つクラスであるかどうか確認するメソッド
 	void test() {
 		Double d = 10.5;
-		d.__________();
+		d.doubleValue();
 		
 		Integer i = 10;
-		i.__________();
+		i.doubleValue();
 		
-		String s = "Hello";
-		s.__________(); // コンパイルエラー
+//		String s = "Hello";
+//		s.doubleValue(); // コンパイルエラー
 	}
 
-	public <T> double getAverage(ArrayList<T> scores){
+	public double getAverage(ArrayList<T> scores){
 		double total = 0.0;
 		for( T score : scores ) {
 			total += score.doubleValue();

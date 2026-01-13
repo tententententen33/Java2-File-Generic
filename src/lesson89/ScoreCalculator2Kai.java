@@ -2,7 +2,7 @@ package lesson89;
 
 import java.util.ArrayList;
 
-class ScoreCalculator2<T extends Number> {
+class ScoreCalculator2Kai<T extends Number> {
 	
 	public double getAverage(ArrayList<T> scores){
 		double total = 0.0;
@@ -12,7 +12,7 @@ class ScoreCalculator2<T extends Number> {
 		return total / scores.size();
 	}
 	
-	public double getMax(ArrayList<T> scores){
+	public double getMax( ArrayList<T> scores){
 		
 		double max = Double.NEGATIVE_INFINITY;
 		for( T score : scores ) {
